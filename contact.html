@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - Consultancy Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 120px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 63px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(162, 162, 234);
+            font-size: 1.4rem;
+        }
+
+        .left {
+            font-size: 2.0rem;
+        }
+
+        .right {
+            font-size: 1.2rem;
+        }
+
+        .contactSection {
+            padding: 60px 80px;
+        }
+
+        .contactSection h1 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .contactDetails {
+            font-size: 1.2rem;
+            line-height: 2rem;
+            background-color: rgb(18, 18, 62);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+        }
+
+        .contactDetails p {
+            margin: 10px 0;
+        }
+        footer {
+    background-color: rgb(18, 18, 62);
+    padding: 30px 0;
+    text-align: center;
+    color: #ccc;
+    margin-top: 120px;
+    font-size: 1rem;
+}
+
+.footerContainer a {
+    color: rgb(162, 162, 234);
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footerContainer a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="contactSection">
+            <h1>Contact Us</h1>
+            <div class="contactDetails">
+                <p><strong>Email:</strong> info@tepsolutions.online</p>
+                <p><strong>Phone:</strong> +1 512 843 3323</p>
+                <p><strong>Office Address:</strong> 732 Landing Ln, Leander, Texas</p>
+                <p><strong>Working Hours:</strong> Mon – Fri, 9:00 AM – 6:00 PM</p>
+            </div>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Load header and footer
+        async function loadContent() {
+            document.getElementById("header-placeholder").innerHTML = await fetch('header.html').then(res => res.text());
+            document.getElementById("footer-placeholder").innerHTML = await fetch('footer.html').then(res => res.text());
+        }
+
+        loadContent();
+    </script>
+</body>
+
+</html>

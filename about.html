@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About - Consultancy Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 120px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 63px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(162, 162, 234);
+            font-size: 1.4rem;
+        }
+
+        .left {
+            font-size: 2.0rem;
+        }
+
+        .right {
+            font-size: 1.2rem;
+        }
+
+        .aboutSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 60px 0;
+            padding: 0 40px;
+        }
+
+        .aboutSection div {
+            width: 45%;
+        }
+
+        .aboutText h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .aboutText p {
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+        }
+
+        .aboutImage img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+        footer {
+    background-color: rgb(18, 18, 62);
+    padding: 30px 0;
+    text-align: center;
+    color: #ccc;
+    margin-top: 40px;
+    font-size: 1rem;
+}
+
+.footerContainer a {
+    color: rgb(162, 162, 234);
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footerContainer a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="aboutSection">
+            <div class="aboutText">
+                <h1>About Our Company</h1>
+                <p>Founded with a mission to empower businesses through cutting-edge technology, TEP Solutions LLC specializes in providing scalable software solutions tailored to client needs. Our experienced team delivers innovative, secure, and efficient systems that help companies grow and thrive in a digital-first world.</p>
+            </div>
+            <div class="aboutImage">
+                <img src="team.png" alt="Our Team">
+            </div>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script>
+        // Load header and footer
+        async function loadContent() {
+            document.getElementById("header-placeholder").innerHTML = await fetch('header.html').then(res => res.text());
+            document.getElementById("footer-placeholder").innerHTML = await fetch('footer.html').then(res => res.text());
+        }
+
+        loadContent();
+    </script>
+</body>
+
+</html>
