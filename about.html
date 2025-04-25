@@ -2,132 +2,80 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>About - Tep Solutions LLC</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8" />
+  <title>About - TEP Solutions LLC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
 
-        body {
-            background-color: rgb(0, 0, 33);
-            color: white;
-            font-family: 'Poppins', sans-serif;
-        }
+  <style>
+    body {
+      background-color: rgb(0, 0, 33);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
 
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 120px;
-            background-color: rgb(18, 18, 62);
-        }
+    .aboutSection {
+      padding: 60px 15px;
+    }
 
-        nav ul {
-            display: flex;
-            justify-content: center;
-        }
+    .aboutText h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
 
-        nav ul li {
-            list-style: none;
-            margin: 0 63px;
-        }
+    .aboutText p {
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+    }
 
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-        }
-
-        nav ul li a:hover {
-            color: rgb(162, 162, 234);
-            font-size: 1.4rem;
-        }
-
-        .left {
-            font-size: 2.0rem;
-        }
-
-        .right {
-            font-size: 1.2rem;
-        }
-
-        .aboutSection {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 60px 0;
-            padding: 0 40px;
-        }
-
-        .aboutSection div {
-            width: 45%;
-        }
-
-        .aboutText h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .aboutText p {
-            font-size: 1.2rem;
-            line-height: 1.8rem;
-        }
-
-        .aboutImage img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-        }
-        footer {
-    background-color: rgb(18, 18, 62);
-    padding: 30px 0;
-    text-align: center;
-    color: #ccc;
-    margin-top: 40px;
-    font-size: 1rem;
+    .aboutImage img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+    nav ul li {
+    list-style: none;
+    margin: 0 60px;  /* Adjust the spacing between the links */
 }
 
-.footerContainer a {
-    color: rgb(162, 162, 234);
+nav ul li a {
     text-decoration: none;
-    margin: 0 5px;
+    color: white;
+    padding: 0 20px;  /* Added padding for consistent spacing */
 }
-
-.footerContainer a:hover {
-    text-decoration: underline;
-}
-
-    </style>
+  </style>
 </head>
 
 <body>
-    <div id="header-placeholder"></div>
+  <div id="header-placeholder"></div>
 
-    <main>
-        <section class="aboutSection">
-            <div class="aboutText">
-                <h1>About Our Company</h1>
-                <p>Founded with a mission to empower businesses through cutting-edge technology, TEP Solutions LLC specializes in providing scalable software solutions tailored to client needs. Our experienced team delivers innovative, secure, and efficient systems that help companies grow and thrive in a digital-first world.</p>
-            </div>
-            <div class="aboutImage">
-                <img src="team.png" alt="Our Team">
-            </div>
-        </section>
-    </main>
-    <div id="footer-placeholder"></div>
-    <script>
-        // Load header and footer
-        async function loadContent() {
-            document.getElementById("header-placeholder").innerHTML = await fetch('header.html').then(res => res.text());
-            document.getElementById("footer-placeholder").innerHTML = await fetch('footer.html').then(res => res.text());
-        }
+  <main class="container aboutSection">
+    <div class="row align-items-center">
+      <div class="col-md-6 aboutText">
+        <h1>About Our Company</h1>
+        <p>
+          Founded with a mission to empower businesses through cutting-edge technology, TEP Solutions LLC specializes
+          in providing scalable software solutions tailored to client needs. Our experienced team delivers innovative,
+          secure, and efficient systems that help companies grow and thrive in a digital-first world.
+        </p>
+      </div>
+      <div class="col-md-6 aboutImage mt-4 mt-md-0">
+        <img src="team.png" alt="Our Team">
+      </div>
+    </div>
+  </main>
 
-        loadContent();
-    </script>
+  <div id="footer-placeholder"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    async function loadContent() {
+      document.getElementById("header-placeholder").innerHTML = await fetch('header.html').then(res => res.text());
+      document.getElementById("footer-placeholder").innerHTML = await fetch('footer.html').then(res => res.text());
+    }
+    loadContent();
+  </script>
 </body>
 
 </html>
